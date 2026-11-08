@@ -83,7 +83,43 @@ koniec:
 
   std::println("y = {}", y);
 }
-
 } // namespace zad3
 
-int main(void) { zad3::a(); }
+namespace zad4 {
+void a() {
+  int y = 0;
+
+  __asm {
+            mov eax, y;
+
+petla:
+            add eax, 1;
+            mov ebx, eax;
+            sub ebx, 5;
+            jnz petla;
+
+            mov y, eax;
+  }
+
+  std::println("y = {}", y);
+}
+
+void b() {
+  int y = 0;
+
+  __asm {
+            mov eax, y;
+
+petla:
+            add eax, 1;
+            cmp eax, 5;
+            jnz petla;
+
+            mov y, eax;
+  }
+
+  std::println("y = {}", y);
+}
+} // namespace zad4
+
+int main(void) { zad4::b(); }
