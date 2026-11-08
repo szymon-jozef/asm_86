@@ -60,6 +60,12 @@ koniec:
 }
 } // namespace zad2
 
+/// ```cpp
+/// if( a == 0x32 )
+///  y = false;
+/// else
+///  y = true
+/// ```
 namespace zad3 {
 void a() {
   char a = 0x32;
@@ -86,6 +92,30 @@ koniec:
 } // namespace zad3
 
 namespace zad4 {
+void a() {
+  int i = 0, y = 0;
+  __asm {
+        mov eax, y;
+        mov ecx, i;
+
+    petla:
+        add eax, ecx;
+        add ecx, 1;
+        cmp ecx, 5;
+        jnz petla;
+
+        mov i, ecx;
+        mov y, eax;
+  }
+
+  std::println("y = {}, i = {}", y, i);
+}
+} // namespace zad4
+
+/// ```cpp
+/// while( y!=5 ) y += 1;
+/// ```
+namespace zad5 {
 void a() {
   int y = 0;
 
@@ -120,6 +150,11 @@ petla:
 
   std::println("y = {}", y);
 }
-} // namespace zad4
+} // namespace zad5
+  //
 
-int main(void) { zad4::b(); }
+namespace zad6 {
+void a() { char a, y; }
+} // namespace zad6
+
+int main(void) { zad4::a(); }
