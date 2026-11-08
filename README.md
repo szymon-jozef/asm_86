@@ -11,4 +11,4 @@
 # VERY GOOD **ASS**EMBLY CODE
 
 # Thanks John Zut for giving me exercises
-![](../../dzielo.png)
+![](.github/assets/dzielo.png)
