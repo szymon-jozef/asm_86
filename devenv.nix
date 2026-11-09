@@ -27,5 +27,7 @@ in
     gnumake
     clangMultiStdenv.cc
     pkgsi686Linux.clang-tools
+    gdb
+    cgdb
   ];
 }
