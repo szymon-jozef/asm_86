@@ -20,6 +20,22 @@ void a() {
 
   std::println("Y = {:d}", y);
 }
+
+/// ```cpp
+/// if (a > 0x05) {
+///     y = 0;
+/// } else {
+///     y = 1;
+/// }
+/// ```
+///
+void d() {
+  char a = 10, y;
+
+  __asm {
+    // TODO!
+  }
+}
 } // namespace zad11
 
 int main() { zad11::a(); }
