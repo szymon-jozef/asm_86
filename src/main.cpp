@@ -91,6 +91,9 @@ koniec:
 }
 } // namespace zad3
 
+/// ```cpp
+/// for( int i=0; i!=5; i++ ) y += i;
+/// ```
 namespace zad4 {
 void a() {
   int i = 0, y = 0;
@@ -149,7 +152,6 @@ void c() {
   std::println("y = {}", y);
 }
 } // namespace zad5
-  //
 
 /// Napisz kod w C oraz w asemblerze zliczający liczbę zer w bajcie a.
 namespace zad6 {
