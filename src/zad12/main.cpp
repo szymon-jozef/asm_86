@@ -6,19 +6,23 @@
 #include <print>
 namespace zad12 {
 void a() {
-  int i = 0, y = 0;
+  int i, y;
 
   __asm {
-        mov eax, y;
-        mov ecx, i;
+    // inicjalizacja
+    mov eax, 0; // y
+    mov ecx, 0; // i
+    
+petla:
+    add eax, 1;
+    add ecx, 1;
 
-    petla:
-        mov ecx, edx;
-        add eax, ecx;
+    mov ebx, ecx;
+    sub ebx, 5;
+    jc petla;
 
-        add ecx, 1;
-        sub edx, 5;
-        jc petla;
+    mov y, eax;
+    mov i, ecx;
   }
 
   std::println("i = {:d}, y = {:d}", i, y);
